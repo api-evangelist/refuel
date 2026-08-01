@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.refuel.ai/sdk/python
+docs: https://docs.refuel.ai/sdk/python
+summary:
+  types: [apiKey]
+  api_key_in: [env, sdk-option]
+  oauth2_flows: []
+  notes: >-
+    Refuel Cloud authenticates every request with an API key. The SDKs read it
+    from the REFUEL_API_KEY environment variable, or accept it as an `api_key`
+    initialization option. A `project` selector scopes all downstream calls
+    (datasets, tasks, etc.) to a single project in the team account.
+schemes:
+- name: apiKey
+  type: apiKey
+  in: env
+  parameter: REFUEL_API_KEY
+  description: >-
+    API key issued per team/account. Supplied via the REFUEL_API_KEY environment
+    variable (picked up automatically by refuel.init()) or passed as the
+    `api_key` option to refuel.init(**options). Used to authenticate all
+    requests to the Refuel API server.
+  sources:
+  - https://docs.refuel.ai/sdk/python
+  - https://docs.refuel.ai/sdk/javascript

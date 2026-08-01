@@ -1,0 +1,31 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.refuel.ai/sdk/python
+packages:
+- language: python
+  registry: pypi
+  name: refuel
+  url: https://pypi.org/project/refuel/
+  install: pip install refuel
+  version: 0.15.15
+  repository: https://github.com/refuel-ai/refuel-python
+  description: Refuel platform SDK — programmatic client for Refuel Cloud (projects, datasets, tasks, task runs, models, applications).
+  official: true
+- language: python
+  registry: pypi
+  name: refuel-autolabel
+  url: https://pypi.org/project/refuel-autolabel/
+  install: pip install refuel-autolabel
+  repository: https://github.com/refuel-ai/autolabel
+  description: Open-source library to label, clean and enrich text datasets with LLMs (imported as `autolabel`).
+  official: true
+- language: javascript
+  registry: npm
+  name: refuel-sdk
+  url: https://www.npmjs.com/package/refuel-sdk
+  install: npm install refuel-sdk
+  version: 0.25.0
+  repository: https://github.com/refuel-ai/refuel-sdk
+  description: JavaScript/TypeScript SDK for the Refuel platform (repository archived).
+  official: true
+  archived: true

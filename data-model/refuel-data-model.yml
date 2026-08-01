@@ -1,0 +1,48 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.refuel.ai/sdk/python
+docs: https://docs.refuel.ai/quickstart
+summary: >-
+  Entity-relationship graph for the Refuel Cloud platform, derived from the
+  documented SDK resources and cloud workflow (project -> dataset -> task ->
+  task run / application). Refuel publishes no OpenAPI, so relationships are
+  captured from the SDK and product docs rather than schema $refs.
+entities:
+- name: Project
+  description: Top-level workspace in a team account; scopes all downstream resources.
+  identifier: uuid | name
+  docs: https://docs.refuel.ai/sdk/python
+  relationships:
+  - has_many: Dataset
+  - has_many: Task
+  - has_many: Application
+- name: Dataset
+  description: Uploaded or connected data (cloud storage, data warehouse, documents/images) to be labeled or enriched.
+  docs: https://docs.refuel.ai/guides/datasets/datasets.md
+  relationships:
+  - belongs_to: Project
+- name: Task
+  description: A labeling/enrichment task definition (classification, extraction, transformation) applied to datasets.
+  docs: https://docs.refuel.ai/guides/tasks/tasks.md
+  relationships:
+  - belongs_to: Project
+  - has_many: TaskRun
+  - has_one: Model
+    via: finetuned_model
+- name: TaskRun
+  description: An execution of a task over a dataset (batch or scheduled).
+  docs: https://docs.refuel.ai/guides/tasks/task_runs.md
+  relationships:
+  - belongs_to: Task
+  - belongs_to: Dataset
+- name: Model
+  description: A base or finetuned LLM used by a task; finetuning runs are tracked.
+  docs: https://docs.refuel.ai/guides/models/overview.md
+  relationships:
+  - belongs_to: Project
+- name: Application
+  description: A deployed task that transforms new data in realtime via API or scheduled runs.
+  docs: https://docs.refuel.ai/guides/applications/deployment.md
+  relationships:
+  - belongs_to: Project
+  - has_one: Task

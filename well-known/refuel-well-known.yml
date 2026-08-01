@@ -1,0 +1,19 @@
+generated: '2026-07-21'
+method: searched
+source: probe of /.well-known/ on Refuel hosts
+hosts:
+- host: https://refuel.ai
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+- host: https://docs.refuel.ai
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+notes: No .well-known discovery documents published on the Refuel hosts probed (all 404). Recorded as evidence; no WellKnown pointer wired.

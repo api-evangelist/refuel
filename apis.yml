@@ -1,8 +1,29 @@
 aid: refuel
 name: Refuel
-description: Refuel is a company surfaced as a portfolio company of general-catalyst and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Refuel is a data labeling and enrichment platform that uses large language
+  models to label, clean, structure, and enrich text datasets at scale. Its
+  Refuel Cloud service lets teams define labeling tasks, connect datasets from
+  cloud storage and data warehouses (Amazon S3, Google Cloud Storage, Snowflake,
+  Databricks), finetune models, chain tasks, evaluate LLM outputs, and deploy
+  applications that transform new data in realtime or in batch. Refuel also
+  publishes the open-source autolabel Python library and first-party Python and
+  JavaScript SDKs for programmatic access, authenticated with API keys. Refuel
+  is joining Together AI.
 url: https://raw.githubusercontent.com/api-evangelist/refuel/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.refuel.ai/
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,12 +32,86 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- Data Labeling
+- Machine Learning
+- LLM
+- Data Enrichment
+- Artificial Intelligence
+- Data Transformation
+- MLOps
+- SDK
+apis:
+- name: Refuel Cloud API
+  description: >-
+    Programmatic access to the Refuel Cloud platform for managing projects,
+    datasets, labeling tasks, task runs, finetuned models, and deployed
+    applications. Accessed through the first-party Python (refuel) and
+    JavaScript (refuel-sdk) SDKs; authenticated with an API key supplied via the
+    REFUEL_API_KEY environment variable or an api_key initialization option.
+  humanURL: https://docs.refuel.ai/quickstart
+  baseURL: https://app.refuel.ai
+  tags:
+  - Data Labeling
+  - LLM
+  - Data Enrichment
+  properties:
+  - type: Documentation
+    url: https://docs.refuel.ai/
+  - type: GettingStarted
+    url: https://docs.refuel.ai/quickstart
+  - type: APIReference
+    url: https://docs.refuel.ai/sdk/python
+  - type: Authentication
+    url: authentication/refuel-authentication.yml
+  - type: Conventions
+    url: conventions/refuel-conventions.yml
+  - type: DataModel
+    url: data-model/refuel-data-model.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 7
+  pass: local-v1
+common:
+- type: DeveloperPortal
+  url: https://docs.refuel.ai/
+- type: Documentation
+  url: https://docs.refuel.ai/
+- type: APIReference
+  url: https://docs.refuel.ai/sdk/python
+- type: GettingStarted
+  url: https://docs.refuel.ai/quickstart
+- type: Blog
+  url: https://www.refuel.ai/blog
+- type: GitHubOrganization
+  url: https://github.com/refuel-ai
+- type: Support
+  url: https://discord.gg/uEdr8nrMGm
+- type: SignUp
+  url: https://app.refuel.ai
+- type: TermsOfService
+  url: https://www.refuel.ai/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.refuel.ai/privacy-policy
+- type: Packages
+  url: packages/refuel-packages.yml
+- type: SDKs
+  url: packages/refuel-packages.yml
+- type: Authentication
+  url: authentication/refuel-authentication.yml
+- type: LLMsTxt
+  url: llms/refuel-llms.txt
+- type: Conventions
+  url: conventions/refuel-conventions.yml
+- type: DataModel
+  url: data-model/refuel-data-model.yml
+- type: DomainSecurity
+  url: security/refuel-domain-security.yml

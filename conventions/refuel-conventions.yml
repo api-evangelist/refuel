@@ -1,0 +1,50 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.refuel.ai/sdk/python
+docs: https://docs.refuel.ai/sdk/python
+summary: >-
+  Cross-cutting request/response semantics for the Refuel Cloud API, derived
+  from the first-party Python and JavaScript SDK documentation. Refuel does not
+  publish an OpenAPI description; these conventions reflect the documented SDK
+  behavior.
+authentication:
+  style: api-key
+  header_or_env: REFUEL_API_KEY
+  see: authentication/refuel-authentication.yml
+project_scoping:
+  supported: true
+  option: project
+  description: >-
+    A required `project` selector (name or UUID) scopes every session to a
+    single project; datasets, tasks, and applications resolve within it. In the
+    cloud UI this is a top-level dropdown; in the SDK it is set at init().
+retries:
+  supported: true
+  option: max_retries
+  default: 3
+  description: SDK client retries failed requests up to max_retries times.
+timeouts:
+  supported: true
+  option: timeout
+  default_seconds: 60
+concurrency:
+  supported: true
+  option: max_workers
+  default: os.cpu_count()
+  description: Max number of concurrent requests the SDK issues to the API server.
+batch_processing:
+  supported: true
+  docs: https://docs.refuel.ai/guides/tasks/task_runs.md
+  description: Tasks can be run over datasets in batch (task runs) or in realtime via deployed applications.
+scheduled_runs:
+  supported: true
+  docs: https://docs.refuel.ai/guides/tasks/scheduled_run.md
+structured_outputs:
+  supported: true
+  docs: https://docs.refuel.ai/guides/tasks/structured_outputs.md
+idempotency:
+  supported: false
+  notes: No idempotency-key contract is documented in the public SDK docs.
+pagination:
+  documented: false
+  notes: Not documented in the public SDK docs reviewed.
