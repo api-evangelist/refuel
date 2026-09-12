@@ -103,6 +103,8 @@ x-enrichment:
   artifacts_added: 7
   pass: local-v1
 common:
+- type: Website
+  url: https://www.refuel.ai/
 - type: DeveloperPortal
   url: https://docs.refuel.ai/
 - type: Documentation
